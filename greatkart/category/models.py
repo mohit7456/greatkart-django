@@ -17,6 +17,7 @@ class Category(models.Model):
     # This function get the particular url of that category
     def get_url(self):
         return reverse('products_by_category', args=[self.slug])
+    # Here 'products_by_category' is name of store url in views.py.
 
     def __str__(self):
         return self.category_name

@@ -131,6 +131,20 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# django messages telling to root folder.
+from django.contrib.messages import constants as messages
+
+# Message tags
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
+# SMTP CONFIGURATION
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'testworking460@gmail.com'
+EMAIL_HOST_PASSWORD = 'jvix avmb sufi ctzs'
+EMAIL_USE_TLS = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

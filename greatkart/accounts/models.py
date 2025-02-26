@@ -5,10 +5,10 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 # Here BaseUsermanager means we customized or extends our default User Model In this class we create a user and give permission for access..
 class MyAccountManager(BaseUserManager):
+    # This function is for normal user.
     def create_user(self, first_name, last_name, username, email, password=None):   # Here we create a user .And we have to pass all Uername_field and required_fiels and use this default function name ..
         if not email:                                                               
             raise ValueError('User must have an email address')
-        
         if not username:
             raise ValueError('User must have an username')
         
@@ -23,6 +23,8 @@ class MyAccountManager(BaseUserManager):
         user.save(using=self.db)
         return user
     
+
+    # This function is for Admin user.
     def create_superuser(self, first_name, last_name, email, username, password):   # Here we assign the permission to the user.
         user = self.create_user(
             email = self.normalize_email(email),
