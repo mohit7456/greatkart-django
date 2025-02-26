@@ -144,7 +144,7 @@ MESSAGE_TAGS = {
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'testworking460@gmail.com'
-EMAIL_HOST_PASSWORD = 'jvix avmb sufi ctzs'
+EMAIL_HOST_PASSWORD = 'xxxx xxxx xxxx xxxx'
 EMAIL_USE_TLS = True
 
 # Default primary key field type
